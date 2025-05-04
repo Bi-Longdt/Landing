@@ -27,6 +27,17 @@
         <h1 class="title glow-text">🔥 𝐓𝐎𝐎𝐋 𝐅𝐑𝐄𝐄 🔥</h1>
         <p>Nhanh tay nhận ngay ae quay thủ ơi‼️</p>
         <a href="https://zalo.me/84325387572" class="cta-button" onclick="ttq.track('CompleteRegistration');">Gửi tin nhắn</a>
+        <script>
+              function sendEventAndRedirect() {
+              ttq.track('CompleteRegistration'); // Gửi sự kiện
+              console.log('Sự kiện đã gửi');
+  
+              // Delay 300ms để chắc chắn sự kiện được gửi đi rồi mới chuyển
+              setTimeout(() => {
+                  window.location.href = 'https://zalo.me/84325387572';
+              }, 300);
+              }
+          </script>
 
         <div class="video-container">
             <video controls class="preview-video" poster="thumbnail.jpg" id="game-video">
