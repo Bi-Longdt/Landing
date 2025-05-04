@@ -1,0 +1,211 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #f8fafc, #e2e8f0);
+}
+
+.container {
+    background: #fff;
+    padding: 30px;
+    margin: 20px auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 400px;
+}
+
+.profile-section {
+    position: relative;
+    background-image: url('background.jpg'); /* Thay 'background.jpg' bằng đường dẫn của ảnh nền */
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 50px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-section h2 {
+    margin: 5px 0;
+    font-size: 20px;
+}
+
+.profile-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+    border-radius: 12px;
+    z-index: -1;
+}
+
+h1 {
+    font-size: 24px;
+    color: #111827;
+}
+
+p {
+    font-size: 16px;
+    color: #4b5563;
+    margin: 15px 0;
+}
+
+.preview-img {
+    width: 100%;
+    border-radius: 10px;
+    margin: 20px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 12px 20px;
+    background: #3b82f6;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+}
+
+.cta-button:hover {
+    background: #2563eb;
+}
+
+/* Định dạng chung cho phần video */
+.preview-video {
+    width: 100%;
+    border-radius: 10px;
+    margin: 10px 0;
+    position: relative;
+    display: block;
+}
+
+/* Bao bọc video để có thể chứa nút bấm */
+.video-container {
+    position: relative;
+    display: inline-block;
+}
+
+/* Nút bấm tròn */
+.play-button {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    background-color: #fff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #3b82f6;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+/* Hiệu ứng hover cho nút bấm */
+.play-button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Xóa viền khi nút bấm được focus */
+.play-button:focus {
+    outline: none;
+}
+
+
+@keyframes shimmer {
+    0% {
+        background-position: -500px 0;
+    }
+    100% {
+        background-position: 500px 0;
+    }
+}
+
+.glow-text {
+    font-size: 32px;
+    font-weight: 900;
+    background: linear-gradient(120deg, #3b82f6, #9333ea, #f59e0b, #3b82f6);
+    background-size: 400% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+}
+
+.stats {
+    margin: 15px 0;
+    font-size: 14px;
+    color: #4b5563;
+}
+
+.stats span {
+    display: block;
+    margin: 5px 0;
+}
+
+.profile-logo {
+    margin: 5px 0;
+    text-align: center;
+}
+
+.logo-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #3b82f6;
+}
+
+/* HIỆU ỨNG H2 CẦU VỒNG GÕ CHỮ */
+.typing-rainbow {
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 130px;
+    margin: 0 auto;
+    text-align: center;
+
+    border-right: 2px solid rgba(255, 255, 255, 0.75);
+    background: linear-gradient(90deg, #ff0080, #ff8c00, #40e0d0, #ff0080);
+    background-size: 300%;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: typing 2s steps(10) infinite, /* Lặp lại gõ chữ */
+               blink 0.7s step-end infinite,
+               rainbowShift 5s linear infinite;
+}
+
+/* Animation gõ chữ */
+@keyframes typing {
+    from { width: 0 }
+    to { width: 130px }
+}
+
+/* Con trỏ nhấp nháy */
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+/* Hiệu ứng cầu vồng mượt */
+@keyframes rainbowShift {
+    0% { background-position: 0% }
+    100% { background-position: 100% }
+}

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Slot4Fun4</title>
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Phần thông tin profile từ ảnh -->
+        <div class="profile-section">
+            <h2 class="typing-rainbow">Slot4Fun4</h2>
+            
+            <!-- Logo hình tròn -->
+            <div class="profile-logo">
+              <img src="logo.jpg" alt="Logo" class="logo-img">
+            </div>
+            
+            <div>
+              <a href="https://linktr.ee/Slot4Fun4" style="color: #3b82f6; text-decoration: none;">linktr.ee/Slot4Fun4</a>
+            </div>
+        </div>
+        
+        <!-- Phần quảng cáo game -->
+        <h1 class="title glow-text">🔥 𝐓𝐎𝐎𝐋 𝐅𝐑𝐄𝐄 🔥</h1>
+        <p>Nhanh tay nhận ngay ae quay thủ ơi‼️</p>
+        <a href="https://zalo.me/84325387572" class="cta-button">Gửi tin nhắn</a>
+        <div class="video-container">
+            <video controls class="preview-video" poster="thumbnail.jpg" id="game-video">
+                <source src="intro.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+            </video>
+            <!-- Nút bấm phát video -->
+            <button class="play-button" id="play-button">▶</button>
+        </div>
+    </div>
+
+    <script>
+        // Lấy phần tử video và nút phát
+        const video = document.getElementById('game-video');
+        const playButton = document.getElementById('play-button');
+
+        // Khi người dùng nhấn nút ▶
+        playButton.addEventListener('click', () => {
+            video.play();
+            playButton.style.display = 'none'; // Ẩn nút phát trong lúc đang phát
+        });
+
+        // Khi video kết thúc, hiện lại nút phát
+        video.addEventListener('ended', () => {
+            playButton.style.display = 'block';
+        });
+
+    </script>
+</body>
+</html>
